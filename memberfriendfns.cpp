@@ -15,7 +15,12 @@ public:
 class Complex
 {
     int a, b;
-    friend Complex calculator::add(Complex, Complex);
+    //individually declaring functions as friends
+    // friend Complex calculator::add(Complex, Complex);
+    
+    //aliter: declaring the entire calculator class as friend
+    friend class calculator;
+
 
 public:
     void setNumber(int n1, int n2)
@@ -38,5 +43,15 @@ Complex calculator::add(Complex o1, Complex o2)
 }
 int main()
 {
+    Complex c1, c2, sum;
+    calculator calc;
+    c1.setNumber(1, 4);
+    c1.printNumber();
+
+    c2.setNumber(5, 8);
+    c2.printNumber();
+
+    sum = calc.add(c1, c2);
+    sum.printNumber();
     return 0;
 }
