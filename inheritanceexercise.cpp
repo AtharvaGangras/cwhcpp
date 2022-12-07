@@ -7,9 +7,9 @@ Create 2 classes:
 
 Create another class Hybrid calculator and inherit it using these 2 classes:
 1.what type of Inheritance are you using? mulitple
-2.Which mode of inheritance are you using?
+2.Which mode of inheritance are you using? protected
 3. Create an object of HybridCalculator and display results of simple and scientific calculator.
-4.How is code reusability implemented?
+4.How is code reusability implemented?implemented by calling the functions in inherited class hybrid.
                     
 */
 
@@ -61,7 +61,33 @@ class scientificcalculator
         cout<<a<<"^"<<b<<" = "<<powab<<endl;
     }
 };
+
+class hybridcalculator:protected simplecalculator,protected scientificcalculator
+{
+    public:
+    void getnums(float a,float b)
+    {
+        simplecalculator::getnums(a,b);
+        getnumssc(a,b);
+    }
+    void display()
+    {
+        simplecalculator::display();
+        displaysc();
+    }
+};
 int main()
 {
     //test obj of each class then create derived class
+    // simplecalculator simcal;
+    // scientificcalculator scical;
+    // simcal.getnums(15.5,14.9);
+    // scical.getnumssc(2,3);
+    // simcal.display();
+    // scical.displaysc();
+    hybridcalculator hb;
+    hb.getnums(15,5);
+    hb.display();
+
+
 }
