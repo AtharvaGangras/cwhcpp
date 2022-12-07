@@ -1,5 +1,5 @@
-        // number(number &obj) //copy constructor
-        // {
-        //     cout<<"Copy constructor called"<<endl;
-        //     a = obj.a; //copies the data
-        // }
+ // void func1()
+    // {
+    //     cout<<a;
+    //     cout<<b; //is not inherited as it is private.
+    // }
