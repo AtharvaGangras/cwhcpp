@@ -89,5 +89,5 @@ int main()
     hb.getnums(15,5);
     hb.display();
 
-
+ 
 }
