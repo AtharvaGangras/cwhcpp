@@ -1,5 +1,3 @@
- // void func1()
-    // {
-    //     cout<<a;
-    //     cout<<b; //is not inherited as it is private.
-    // }
+ // //opening files using constructor and writing to it.
+    // ofstream out("fileio.txt");//creates a new file in pwd if does not exist
+    // out<<"Atharva!";
